@@ -3,7 +3,7 @@
 VERSION=6.0.1
 
 # declare an image name
-IMG_NAME=offchain-python-randomness
+IMG_NAME=iexec-offchain-python-randomness
 IMG_FROM=${IMG_NAME}:latest
 IMG_TO=${IMG_NAME}:tee-debug-${VERSION}
 

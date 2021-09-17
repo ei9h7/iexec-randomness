@@ -1,0 +1,2 @@
+#!/bin/sh
+docker image build --no-cache --force-rm . -t iexec-offchain-python-randomness-uint256
