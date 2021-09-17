@@ -1,12 +1,17 @@
-# iExec randomness
-*iexec randomness apps*
+#iExec randomness
 
-### uint256
+---
+## uint256 version
+
 *returns [uint256] callback*
+#####Demo IPFS URL
 
-### full
+http://iexec.dev/ipfs/random-uint256
+
+## full version
 *returns [bytes32, uint256] callback*
 
+---
 ## Setup
 ***build docker image***
 
