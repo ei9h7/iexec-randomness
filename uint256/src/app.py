@@ -20,11 +20,15 @@ def add_callback(r):
         json.dump({"callback-data": cb}, f)
 
 
+def generate_randomness(nbytes=32):
+    return hashlib.sha256(secrets.token_bytes(nbytes)).hexdigest()
+
+
 if __name__ == '__main__':
     """SHA-256 hash of 32 bytes (256 bits) of randomness using secrets module
     https://docs.python.org/3/library/secrets.html
     
     """
 
-    randomness = hashlib.sha256(secrets.token_bytes(32)).hexdigest()
+    randomness = generate_randomness(32)
     add_callback(randomness)

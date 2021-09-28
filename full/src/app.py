@@ -1,7 +1,7 @@
 import json
 import os
 import sys
-from generator import create_randomness
+from generator import generate_randomness
 
 iexec_out = os.getenv("IEXEC_OUT")
 
@@ -34,5 +34,5 @@ def add_callback(ri, rv):
 
 if __name__ == '__main__':
     randomness_key, args = parse_iexec_args(sys.argv)
-    randomness_id, random_result = create_randomness(randomness_key, args)
+    randomness_id, random_result = generate_randomness(randomness_key, args)
     add_callback(randomness_id, random_result)

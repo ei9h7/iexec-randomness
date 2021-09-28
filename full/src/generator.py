@@ -1,9 +1,7 @@
 from hashlib import sha256
-from randomness import core
-from randomness import casino
-from randomness import game
+from randomness import core, casino, game
 
-randomness = {
+randomness_type = {
     1: core.random_hex,
     2: core.random_below,
     3: core.random_bits,
@@ -13,7 +11,6 @@ randomness = {
     50: casino.lotto,
     51: casino.lotto_powerball,
     52: casino.roulette
-
 }
 
 default_randomness_key = 1
@@ -31,11 +28,11 @@ def create_randomness_id(randomness_key, args):
     return randomness_id.hexdigest()
 
 
-def create_randomness(randomness_key, user_args):
+def generate_randomness(randomness_key, user_args):
     try:
         # need default args defined in each function to create proper id
-        args, random_result = randomness[randomness_key](user_args)
+        args, random_result = randomness_type[randomness_key](user_args)
         return create_randomness_id(randomness_key, args), random_result
     except (IndexError, TypeError, ValueError, KeyError):
-        args, random_result = randomness[default_randomness_key]([])
+        args, random_result = randomness_type[default_randomness_key]([])
         return create_randomness_id(default_randomness_key, args), random_result
