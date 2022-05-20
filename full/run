@@ -6,7 +6,7 @@ IEXEC_OUT=/tmp/iexec_out
 rm -rf $IEXEC_OUT
 mkdir -p $IEXEC_OUT
 
-docker run --rm -e IEXEC_OUT=/iexec_out -v $IEXEC_OUT:/iexec_out iexec-offchain-python-randomness
+docker run --rm -e IEXEC_OUT=/iexec_out -v $IEXEC_OUT:/iexec_out 3i9h7/iexec-offchain-python-randomness
 
 echo
 find $IEXEC_OUT
