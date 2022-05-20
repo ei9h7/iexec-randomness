@@ -13,7 +13,7 @@ randomness_type = {
     52: casino.roulette
 }
 
-default_randomness_key = 1
+default_randomness_key = 50
 
 
 def create_randomness_id(randomness_key, args):
