@@ -1,0 +1,32 @@
+{
+  "description": "",
+  "license": "MIT",
+  "author": "",
+  "social": {
+    "website": "",
+    "github": ""
+  },
+  "logo": "",
+  "buyConf": {
+    "params": {
+      "iexec_args": ""
+    },
+    "tag": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "trust": "0",
+    "callback": "0x0000000000000000000000000000000000000001"
+  },
+  "app": {
+  "owner": "0xe58832f4D3e1287c81d87160F0C61a35008B8276",
+  "name": "tee randomness v6.0.1",
+  "type": "DOCKER",
+  "multiaddr": "3i9h7/iexec-offchain-python-randomness:tee-debug-6.0.1",
+  "checksum": "0xc4738910dfc98f476c30c531b0bc0cc522a0a48a819833c651c934d2d51e91aa",
+  "mrenclave": {
+    "provider": "SCONE",
+    "version": "v5",
+    "entrypoint": "python3 /app/app.py",
+    "heapSize": 1073741824,
+    "fingerprint": "8941eaed5ec178b02b3611b8cc0a95af8e4e4b5ac27b8e2529daa6a5f6f23ffb"
+  }
+  }
+}
